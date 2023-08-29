@@ -9,9 +9,20 @@ class Course extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'hours'
+    ];
+
     public function assignedStudents(){
         return $this->belongsToMany(User::class, 'classrooms', 'course_id', 'user_id')
-            ->withTimestamps();
+            ->withTimestamps()
+            ->onDelete('cascade');
     }
 
 }

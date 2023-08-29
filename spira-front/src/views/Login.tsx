@@ -41,13 +41,14 @@ function Login() {
     return (
         <>
             <form onSubmit={handleSubmit} className={'container-lg w-100 d-flex flex-column gap-4'}>
-                <label htmlFor="" className={'d-flex flex-column gap-2'}>
+                <h1>Login</h1>
+                <label htmlFor="" className={'d-flex flex-column gap-2 '}>
                     <span>Email</span>
-                    <input type="email" onChange={getEmail} name="email" id="" />
+                    <input type="email" onChange={getEmail} name="email" id="" className={'bg-white border border-secondary-subtle rounded'} />
                 </label>
                 <label htmlFor="" className={'d-flex flex-column gap-2'}>
                     <span>Contraseña</span>
-                    <input type="password" onChange={getPassword} name="password" id="" />
+                    <input type="password" onChange={getPassword} name="password" id="" className={'bg-white border border-secondary-subtle rounded'} />
                 </label>
                 <button type="submit">Ingresar</button>
             </form>
